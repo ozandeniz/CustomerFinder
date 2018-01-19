@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Arguments {
     @Parameter(names = "-method", description = "Method for calculating the distance")
-    private String method = Methods.HAVERSINE.method();
+    private String method = Methods.SPHERICAL_LAW_OF_COSINES.method();
 
     @Parameter(names = "-fileName", required = true, description = "Input file name for customer data")
     private String fileName;

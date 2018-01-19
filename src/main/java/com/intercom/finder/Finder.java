@@ -8,18 +8,18 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-class Finder {
+public class Finder {
     private final Coordinate baseCoordinate;
     private DistanceCalculator distanceCalculator;
     private List<CustomerInfo> customerInfoList;
 
-    Finder(DistanceCalculator distanceCalculator, List<CustomerInfo> customerInfoList, Coordinate baseCoordinate) {
+    public Finder(DistanceCalculator distanceCalculator, List<CustomerInfo> customerInfoList, Coordinate baseCoordinate) {
         this.distanceCalculator = distanceCalculator;
         this.customerInfoList = customerInfoList;
         this.baseCoordinate = baseCoordinate;
     }
 
-    List<CustomerInfo> findNearest(double maxDistance) {
+    public List<CustomerInfo> findNearest(double maxDistance) {
         List<CustomerInfo> nearestCustomers = new ArrayList<>();
         for (CustomerInfo customerInfo : customerInfoList) {
             Coordinate customerCoordinate = new Coordinate(customerInfo.getLatitude(), customerInfo.getLongitude());
