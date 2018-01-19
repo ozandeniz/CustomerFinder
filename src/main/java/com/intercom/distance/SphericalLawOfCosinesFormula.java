@@ -11,6 +11,6 @@ public class SphericalLawOfCosinesFormula extends GreatCircleDistanceCalculator 
         double angle = Math.acos(Math.sin(angle1) * Math.sin(angle2)
                 + Math.cos(angle1) * Math.cos(angle2) * Math.cos(delta));
 
-        return angle * SPHERE_OF_RADIUS;
+        return angleToKm(angle);
     }
 }

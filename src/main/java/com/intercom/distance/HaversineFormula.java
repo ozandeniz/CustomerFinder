@@ -13,6 +13,6 @@ public class HaversineFormula extends GreatCircleDistanceCalculator {
                 Math.cos(angle1) * Math.cos(angle2) * Math.pow(Math.sin(deltaAngle2 / 2), 2);
 
         double angle = 2 * Math.atan2(Math.sqrt(tmp), Math.sqrt(1-tmp));
-        return angle * SPHERE_OF_RADIUS;
+        return angleToKm(angle);
     }
 }
